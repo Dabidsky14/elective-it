@@ -1,0 +1,308 @@
+:root {
+    --green-dark: #1f5138;
+    --green: #347a52;
+    --green-soft: #edf7f0;
+    --green-border: #c9e2cf;
+    --text: #203229;
+    --muted: #65756b;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--green-soft);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.page-shell {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 28px 16px;
+}
+
+.signup-card,
+.result-card {
+    width: min(100%, 640px);
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--green-border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(31, 81, 56, 0.1);
+}
+
+.card-accent {
+    height: 7px;
+    background: var(--green);
+}
+
+.card-header {
+    padding: 28px 28px 20px;
+    text-align: center;
+}
+
+.page-title {
+    margin: 0;
+    color: var(--green-dark);
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    margin: 8px 0 0;
+    color: var(--muted);
+}
+
+.signup-form {
+    padding: 0 28px 28px;
+}
+
+.form-section {
+    min-inline-size: 0;
+    margin: 0;
+    padding: 22px 0 0;
+    border: 0;
+}
+
+.form-section + .form-section {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid var(--green-border);
+}
+
+.form-section legend {
+    float: none;
+    width: 100%;
+    margin: 0 0 14px;
+    padding: 0;
+    color: var(--green-dark);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.form-grid {
+    display: grid;
+    gap: 14px;
+}
+
+.form-grid-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-stack .form-field + .form-field {
+    margin-top: 14px;
+}
+
+.form-field {
+    min-width: 0;
+}
+
+.form-field label,
+.field-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text);
+    font-size: 0.93rem;
+    font-weight: 700;
+}
+
+.email-field,
+.gender-field {
+    margin-top: 14px;
+}
+
+.form-control,
+.form-select {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid var(--green-border);
+    border-radius: 6px;
+    background-color: var(--white);
+    color: var(--text);
+    font: inherit;
+    font-size: 1rem;
+}
+
+.form-control::placeholder {
+    color: #8a988f;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--green);
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(52, 122, 82, 0.16);
+}
+
+.password-control {
+    display: flex;
+    align-items: stretch;
+}
+
+.password-control .form-control {
+    border-radius: 6px 0 0 6px;
+}
+
+.password-toggle {
+    min-width: 70px;
+    padding: 10px 12px;
+    border: 1px solid var(--green-border);
+    border-left: 0;
+    border-radius: 0 6px 6px 0;
+    background: #f7fbf8;
+    color: var(--green-dark);
+    font: inherit;
+    cursor: pointer;
+}
+
+.password-toggle:hover,
+.password-toggle:focus-visible {
+    background: #e6f3e9;
+}
+
+.helper-text {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.choice-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.choice {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid var(--green-border);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.choice:hover {
+    background: #f7fbf8;
+}
+
+.choice input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: var(--green);
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 26px;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--green);
+    color: var(--white);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+    background: var(--green-dark);
+}
+
+.result-content {
+    padding: 32px 28px 28px;
+    text-align: center;
+}
+
+.result-content .page-subtitle {
+    max-width: 430px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.account-details {
+    margin-top: 24px;
+    overflow: hidden;
+    border: 1px solid var(--green-border);
+    border-radius: 7px;
+    text-align: left;
+}
+
+.account-details p {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--green-border);
+}
+
+.account-details p:last-child {
+    border-bottom: 0;
+}
+
+.account-details strong {
+    color: var(--green-dark);
+}
+
+.account-details span {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 11px 18px;
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--green-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-button:hover,
+.back-button:focus-visible {
+    background: var(--green-soft);
+}
+
+@media (max-width: 600px) {
+    .page-shell {
+        align-items: start;
+        padding: 16px 12px;
+    }
+
+    .card-header,
+    .result-content,
+    .signup-form {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .form-grid-two {
+        grid-template-columns: 1fr;
+    }
+
+    .account-details p {
+        display: block;
+    }
+
+    .account-details span {
+        display: block;
+        margin-top: 3px;
+        text-align: left;
+    }
+}
