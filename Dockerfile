@@ -5,6 +5,7 @@ ENV PORT=10000
 WORKDIR /var/www/html
 
 COPY lab3/ /var/www/html/
+COPY index.php /var/www/html/index.php
 
 EXPOSE 10000
 

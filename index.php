@@ -1,2 +1,3 @@
 <?php
-header("Location: /lab3/register.php");
+header("Location: /register.php");
+exit;
